@@ -1,101 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akash Das- Developer Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="link"
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <title>Akash Das Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
       }
-      body {
-        background-color: rgb(0, 0, 33);
-        color: white;
-      }
-      nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 100px;
-        background-color: rgb(2, 34, 44);
-      }
-      nav ul {
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        list-style: none;
-        margin: 0 23px;
-      }
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-      }
-      nav ul li a:hover {
-        color: rgb(156, 156, 174);
-        font-size: 1.05rem;
-      }
-
-      .left {
-        font-size: 2rem;
-      }
-      .firstsection {
-        display: flex;
-        justify-content: space-around;
-        margin: 50px 0;
-      }
-      .firstsection > div {
-        width: 40%;
-      }
-      .leftsection {
-        font-size: 2.5rem;
-      }
-      .rightsection img {
-        width: 80%;
-        margin: 50px;
-      }
-      .purple {
-        color: rgb(138, 40, 229);
-      }
-      .h1{
-        margin: 10%;
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
       }
     </style>
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="left">Akash Das-Portfolio</div>
-        <div class="right"></div>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Services</a></li>
-          <li><a href="/">Projects</a></li>
-          <li><a href="/">Contact Me</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="firstsection">
-        <div class="leftsection">
-          Hi, My Name is <span class="purple">Akash Das</span>
-          <div>I am Enthusiast in web Developing</div>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Akash Das</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          </ul>
         </div>
-        <div class="rightsection">
-          <img src="bg.png" alt="">
+      </div>
+    </nav>
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/My\ second\ photo.jpg);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Akash Das</span></h1>
+                  <span id="typing-animation"></span>
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = ['Tech Enthusiast  ', 'Software Developer ', 'Gamer  '];
+                    function playTypingAnimation(text) {
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 200);
+                      }
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 200);
+                    }
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
+                  <br><br>
+                  <h2>Student at USICT</h2>
+                  <p>
+                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                    <a href="https://github.com/I-akashdas" class="btn btn-white btn-outline-white py-3 px-4">GITHUB</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-     
-    </main>
+      </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
+
